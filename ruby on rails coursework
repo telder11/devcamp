@@ -1,0 +1,31 @@
+gpg --keyserver hkp://keys.gnupg.net --recv-keys D39DC0E3
+curl -L https://get.rvm.io | sudo bash -s stable --rails
+echo "source ~/.profile" >> ~/.bash_profile
+unset GEM_HOME
+sudo service postgresql start
+sudo sudo -u postgres psql
+CREATE USER username SUPERUSER PASSWORD 'password';
+\q 
+echo "export USERNAME=username" >> ~/.profile
+echo "export PASSWORD=password" >> ~/.profile 
+. ~/.profile
+sudo sudo -u postgres psql
+UPDATE pg_database SET datistemplate = FALSE WHERE datname = 'template1';
+DROP DATABASE template1;
+CREATE DATABASE template1 WITH TEMPLATE = template0 ENCODING = 'UNICODE';
+UPDATE pg_database SET datistemplate = TRUE WHERE datname = 'template1';
+\c template1
+VACUUM FREEZE;
+\q
+rvm install 2.3.1
+gem install rails
+
+# Startup Postgres server automatically
+function checkstart {
+    service=$1
+    if [[ ! $(ps -ef | grep -v grep | grep "$service" | wc -l) > 0 ]]
+    then
+        sudo service $service start &
+    fi
+}
+checkstart postgresql
