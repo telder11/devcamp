@@ -30,7 +30,7 @@ puts "five skills created"
       subtitle: "Ruby on Rails",
       body: "Lorum ipsum paragraph",
       main_image: "http://via.placeholder.com/600x400",
-      thumb_image: "http://via.placeholder.com/350x150"
+      thumb_image: "http://via.placeholder.com/350x200"
     )
 end
 
@@ -40,7 +40,7 @@ end
       subtitle: "Angular",
       body: "Lorum ipsum paragraph",
       main_image: "http://via.placeholder.com/600x400",
-      thumb_image: "http://via.placeholder.com/350x150"
+      thumb_image: "http://via.placeholder.com/350x200"
     )
 end
 puts "nine portfolio items created"
