@@ -38,7 +38,9 @@ class PortfoliosController < ApplicationController
       end
      end
    end
-   
+   def angular
+    @angular_portfolio_items = Portfolio.angular
+   end
    def show
      @portfolio_item = Portfolio.find(params[:id])
    end
