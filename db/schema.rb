@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171017225234) do
+ActiveRecord::Schema.define(version: 20171024222429) do
 
   create_table "blogs", force: :cascade do |t|
     t.string   "title"
@@ -20,9 +20,11 @@ ActiveRecord::Schema.define(version: 20171017225234) do
     t.datetime "updated_at",             null: false
     t.string   "slug"
     t.integer  "status",     default: 0
+    t.integer  "topic_id"
   end
 
   add_index "blogs", ["slug"], name: "index_blogs_on_slug", unique: true
+  add_index "blogs", ["topic_id"], name: "index_blogs_on_topic_id"
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -52,6 +54,23 @@ ActiveRecord::Schema.define(version: 20171017225234) do
     t.integer  "percent_utilized"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
+    t.text     "badge"
+  end
+
+  create_table "technologies", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "portfolio_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    
+  end
+
+  add_index "technologies", ["portfolio_id"], name: "index_technologies_on_portfolio_id", using: :btree
+
+  create_table "topics", force: :cascade do |t|
+    t.string   "title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
