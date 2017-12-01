@@ -16,4 +16,8 @@ module ApplicationHelper
       end
     end
     
+    def copyright_generator
+      TelderViewTool::Renderer.copyright 'Trevor Elder', 'All rights reserved'
+    end
+    
 end
