@@ -51,3 +51,4 @@ gem 'devise', '~> 4.3'
 
 gem 'telder_view_tool', git: 'https://github.com/telder11/telder_view_tool'
 gem 'petergate', '~> 1.8'
+gem 'bootstrap', '~> 4.0.0.beta2.1'
