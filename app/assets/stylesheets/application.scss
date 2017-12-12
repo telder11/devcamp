@@ -161,3 +161,24 @@ body {
     width: 55rem;
   }
 }
+
+/*
+ * Custom Styles
+ */
+ 
+.card-body {
+   color: black;
+   text_align: left;
+ }
+ 
+.auth_links a {
+   color: black;
+ }
+ 
+ .row {
+   text_align: left;
+ }
+
+.col-md-4 {
+  text_align: left;
+}
