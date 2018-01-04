@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 @import "bootstrap";
-
+@import "font-awesome";
 @media (min-width: 48em) {
   html {
     font-size: 18px;
@@ -170,3 +170,8 @@ h6,
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
+/*
+ * Custom styles
+ */
+
