@@ -117,7 +117,7 @@ GEM
     orm_adapter (0.5.0)
     petergate (1.8.0)
       activerecord (> 4.0.0)
-    popper_js (1.12.5)
+    popper_js (1.12.9)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
@@ -215,6 +215,7 @@ DEPENDENCIES
   jquery-rails
   kaminari (~> 1.1, >= 1.1.1)
   petergate (~> 1.8)
+  popper_js (~> 1.12, >= 1.12.9)
   pry-byebug
   rails (= 4.2.5)
   sass-rails (~> 5.0)

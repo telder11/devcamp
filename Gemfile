@@ -48,7 +48,7 @@ end
 
 gem 'friendly_id', '~> 5.1.0'
 gem 'devise', '~> 4.3'
-
+gem 'popper_js', '~> 1.12', '>= 1.12.9'
 gem 'telder_view_tool', git: 'https://github.com/telder11/telder_view_tool'
 gem 'petergate', '~> 1.8'
 gem 'bootstrap', '~> 4.0.0.beta2.1'
